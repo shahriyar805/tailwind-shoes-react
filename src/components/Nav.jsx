@@ -23,11 +23,13 @@ function Nav({ onClickShoppingButton }) {
       </button>
       {/* Menu list */}
       <div className={`${!isMobileMenuShown && "hidden"} mb-6 w-full lg:mb-0 lg:block lg:w-auto`}>
-        <ul className="flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 text-lg lg:flex-row lg:space-x-8 lg:border-none lg:bg-transparent lg:dark:text-white">
+        <ul className="dark:bg-night-50 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 text-lg lg:flex-row lg:space-x-8 lg:border-none lg:bg-transparent dark:border-gray-700 lg:dark:bg-transparent lg:dark:text-white">
           {ROUTES.map((route, i) => (
             <li
               className={`cursor-pointer rounded px-3 py-2 lg:hover:bg-transparent lg:hover:text-blue-500 ${
-                i === 0 ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-500" : "hover:bg-gray-100"
+                i === 0
+                  ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-500"
+                  : "hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600 dark:hover:lg:bg-transparent"
               } ${i >= 3 && "lg:text-white"}`}
               key={route}
             >
